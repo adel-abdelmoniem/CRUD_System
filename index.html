@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BootStrap WebSite">
+  <meta name="keywords" content="HTML,CSS,CSS3,BOOTSTRAP,HTML5">
+  <meta name="author" content="Adel Abdelmoniem">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+  <title>Crud System</title>
+
+</head>
+
+<body class=" bg-light">
+
+  <div class="container">
+
+    <!-- Start Forms -->
+
+    <div class=" w-75 m-auto py-5">
+
+      <h1>CRUD System</h1>
+
+      <div class=" form-group">
+        <label for="proname">Prodect Name</label>
+        <input id="proname" type="text" class=" form-control" placeholder="ex: Apple ipad pro">
+        <div id="prodAlertMsg" class="alert alert-danger mt-2" role="alert">
+          Prodect Name Must Be Start With character And Between (4 to 10 characters only ! )
+        </div>
+      </div>
+
+      <div class=" form-group">
+        <label for="procategory">Prodect Category</label>
+        <input id="procategory" type="text" class=" form-control" placeholder="ex: Tablet">
+        <div id="cateAlertMsg" class="alert alert-danger mt-2" role="alert">
+          Prodect Category Must Be Start With character !
+        </div>
+        
+      </div>
+
+      <div class=" form-group">
+        <label for="proprice">Prodect Price</label>
+        <input id="proprice" type="text" class=" form-control" placeholder="ex: 9000">
+        <div id="priceAlertMsg" class="alert alert-danger mt-2" role="alert">
+          min price:1000 L.E , max price:9999 L.E
+        </div>
+      </div>
+
+
+
+
+      <div class=" form-group">
+        <label for="prodescription">Prodect Description</label>
+        <textarea id="prodescription" type="text" class=" form-control"
+          placeholder="ex: Apple ipad pro with facetime-11inch dispaly ,wifi,128G"></textarea>
+      </div>
+
+      <button id="addbtn" class=" btn btn-primary">Add Prodect</button>
+
+    </div>
+    <!-- End Forms -->
+
+
+    <!-- Search Buttom -->
+
+    <input id="searchInputs" type="text" class=" form-control w-75 m-auto " placeholder="Search">
+
+    <!--  Start Data Show Table -->
+
+    <div class=" mt-4">
+      <table class="table  m-auto">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Prodect Name</th>
+            <th scope="col">Prodect Category</th>
+            <th scope="col">Prodect Price</th>
+            <th scope="col">Prodect Description</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete </th>
+          </tr>
+        </thead>
+
+        <tbody id="tablebody">
+
+        </tbody>
+    </div>
+
+    <!--  End Data Show Table -->
+
+  </div>
+
+  <script src="js/jquery-3.5.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

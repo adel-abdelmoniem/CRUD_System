@@ -14,9 +14,6 @@ alertMsg.classList.add("d-none");
 cateAlertMsg.classList.add("d-none");
 priceAlertMsg.classList.add("d-none");
 
-
-
-
 // ---- Start Validation Functions ----
 
 prodectName.onkeyup = function () {
@@ -36,7 +33,6 @@ prodectName.onkeyup = function () {
 
     }
 }
-
 
 prodectCategory.onkeyup = function () {
     var rejex = /[^(!@#$%^&*()-_=+*/)]/;
@@ -74,10 +70,7 @@ prodectPrice.onkeyup = function () {
     }
 }
 
-
-
 // ---- End Validation Functions ----
-
 
 if (localStorage.getItem("prodectsDetalis") == null) {
     var prodectLists = [];
@@ -96,20 +89,15 @@ addBtn.onclick = function () {
 
     }
 
-    else 
-    {
+    else {
         EditProduct();
         addBtn.innerHTML = "Add Prodect";
-
 
     }
 
     localStorage.setItem("prodectsDetalis", JSON.stringify(prodectLists));
     displayProdects();
     clearFiled();
-
-
-
 
 }
 
@@ -150,8 +138,6 @@ function checkInputs() {
         }
 
     }
-
-
 }
 
 function AddProdect() {
@@ -165,8 +151,6 @@ function AddProdect() {
         }
         prodectLists.push(prodects);
         removeValidation();
-
-       
     }
     else {
         window.alert(' Sorry , All Fields Is Requied ')
@@ -202,7 +186,6 @@ function deleteProdect(index) {
 
 }
 
-
 function update(index) {
     var currentProdect = prodectLists[index];
 
@@ -211,13 +194,11 @@ function update(index) {
     prodectPrice.value = currentProdect.price;
     prodectDescription.value = currentProdect.descp;
     addBtn.innerHTML = "Edit Prodect";
-    currentIndex=index;
+    currentIndex = index;
 
 }
 
-
-function EditProduct()
-{
+function EditProduct() {
 
     if (checkInputs() == true) {
         var prodects =
@@ -227,8 +208,8 @@ function EditProduct()
             price: prodectPrice.value,
             descp: prodectDescription.value
         }
-       
-        prodectLists[currentIndex]=prodects;
+
+        prodectLists[currentIndex] = prodects;
     }
     else {
         window.alert(' Sorry , All Fields Is Requied ')
@@ -237,10 +218,7 @@ function EditProduct()
 
 }
 
-
-
-function removeValidation()
-{
+function removeValidation() {
     prodectPrice.classList.remove("is-valid");
     prodectCategory.classList.remove("is-valid");
     prodectName.classList.remove("is-valid");
